@@ -1,0 +1,33 @@
+body {
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #0f2027,
+        #203a43,
+        #2c5364
+    );
+
+    color: white;
+}
+
+.hidden {
+    display: none !important;
+}
+
+button {
+    cursor: pointer;
+
+    padding: 8px 14px;
+
+    border: none;
+    border-radius: 8px;
+}
+
+input {
+    padding: 8px;
+
+    border: none;
+    border-radius: 8px;
+}

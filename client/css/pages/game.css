@@ -1,0 +1,53 @@
+#topPlayer {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+
+    z-index: 40;
+
+    transform: translateX(-50%);
+}
+
+#bottomPlayer {
+    width: auto;
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    flex-shrink: 0;
+}
+
+#roomText {
+    position: fixed;
+    top: 60px;
+    left: 14px;
+
+    z-index: 500;
+
+    padding: 6px 10px;
+
+    border-radius: 8px;
+
+    background: rgba(0, 0, 0, 0.35);
+
+    color: white;
+    font-size: 14px;
+}
+
+#pauseOverlay {
+    position: fixed;
+    inset: 0;
+
+    z-index: 1500;
+    pointer-events: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 120px;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}

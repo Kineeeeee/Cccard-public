@@ -1,0 +1,31 @@
+#effects-layer {
+    position: fixed;
+    inset: 0;
+
+    z-index: 1000;
+
+    pointer-events: none;
+}
+
+.floating-score {
+    position: fixed;
+
+    z-index: 1000;
+
+    font-size: 32px;
+    font-weight: bold;
+
+    pointer-events: none;
+
+    transform: translateX(-50%);
+
+    animation: floatingScore 1.5s ease-out forwards;
+}
+
+.floating-score.positive {
+    color: #4ade80;
+}
+
+.floating-score.negative {
+    color: #f87171;
+}

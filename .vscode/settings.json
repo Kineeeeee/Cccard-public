@@ -1,0 +1,4 @@
+{
+  "jest.jestCommandLine": "cmd /c npm test --",
+  "jestrunner.jestCommand": "cmd /c npm test --"
+}

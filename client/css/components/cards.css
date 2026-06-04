@@ -1,0 +1,100 @@
+.card {
+    position: relative;
+
+    width: 45px;
+    height: 65px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    flex-shrink: 0;
+
+    padding: 4px;
+
+    border-radius: 8px;
+
+    background: white;
+
+    color: black;
+    font-size: 12px;
+    font-weight: bold;
+    border: 1px solid #cbd5e1;
+}
+
+.card.red {
+    color: red;
+}
+
+.card.selected {
+    top: -10px;
+}
+
+#tableCards {
+    display: flex;
+    gap: 10px;
+}
+
+#hand {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    flex-wrap: nowrap;
+
+    overflow-x: auto;
+
+    padding: 10px;
+
+    flex-shrink: 0;
+
+    min-width: 365px;
+}
+
+#hand .card {
+    margin-left: -20px;
+}
+
+#hand .card:first-child {
+    margin-left: 0;
+}
+
+#hand.is-dealing {
+    overflow: visible !important;
+}
+
+.card.dragging {
+    opacity: 0.5;
+    border: 1.5px dashed #38bdf8;
+    transform: scale(0.95);
+}
+
+.center-deck {
+    width: 45px;
+    height: 65px;
+    background: repeating-linear-gradient(
+        45deg,
+        #1e40af,
+        #1e40af 5px,
+        #1d4ed8 5px,
+        #1d4ed8 10px
+    ); /* Striped blue back */
+    border: 2px solid white;
+    border-radius: 8px;
+    box-shadow: 1px 1px 0 white, 2px 2px 0 #1e40af, 3px 3px 0 white, 4px 4px 0 #1e40af, 5px 5px 0 white, 6px 6px 0 #1e40af;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+@keyframes deal-slide-in {
+    0% { opacity: 0; transform: translateY(-250px) scale(0.5); }
+    100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.card.deal-anim {
+    animation: deal-slide-in 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    opacity: 0;
+}

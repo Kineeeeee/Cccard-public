@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Tien Len Realtime</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+
+<body>
+
+<div class="game-container">
+
+    <!-- LOGIN / LOBBY -->
+    <div id="loginScreen" class="login-screen">
+
+        <div class="login-box">
+
+            <h1>Tien Len Realtime</h1>
+
+            <input
+                id="nameInput"
+                placeholder="Your name"
+            >
+
+            <input
+                id="roomInput"
+                placeholder="Room ID"
+            >
+
+            <button id="createBtn">
+                Create Room
+            </button>
+
+            <button id="joinBtn">
+                Join Room
+            </button>
+
+        </div>
+
+    </div>
+
+    <div id="gameScreen" class="hidden">
+
+        <div id="pauseOverlay" class="hidden">
+            ⏸
+        </div>
+
+        <!-- TOP BAR -->
+        <div class="top-bar">
+
+            <div class="top-left-controls">
+
+                <button id="settingsBtn" class="settings-btn">
+                    ⚙
+                </button>
+
+                <button id="startBtn">
+                    Start
+                </button>
+
+                <button id="pauseBtn">
+                    Pause
+                </button>
+
+                <button id="quitBtn">
+                    Quit
+                </button>
+
+            </div>
+
+            <div id="roomText"></div>
+
+            <div class="log-panel panel">
+
+                <h3>Game Log</h3>
+
+                <div id="logs"></div>
+
+            </div>
+
+        </div>
+
+        <div id="settingsModal" class="settings-modal hidden">
+
+            <div class="settings-content">
+
+                <div class="settings-header">
+
+                    <button id="closeSettingsBtn">
+                        ✕
+                    </button>
+
+                </div>
+
+                <div class="settings-body">
+
+                    <div id="settingsList"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="topPlayer" class="player-slot"></div>
+
+        <!-- TABLE -->
+        <div class="table-area">
+
+            <div class="middle-row">
+
+                <div id="leftPlayer" class="player-slot"></div>
+
+                <div class="table-center">
+
+                    <div id="centerDeck" class="center-deck hidden"></div>
+
+                    <div id="turnText"></div>
+
+                    <div id="tableCards"></div>
+
+                    <div id="gameOver"></div>
+
+                    <div id="prepTimerContainer"></div>
+
+                </div>
+
+                <div id="rightPlayer" class="player-slot"></div>
+
+            </div>
+
+        </div>
+
+        <!-- BOTTOM -->
+        <div class="bottom-bar">
+
+            <div class="your-hand-section">
+
+                <div class="action-buttons">
+
+                    <button id="declareBtn">
+                        Declare
+                    </button>
+
+                    <button id="playBtn">
+                        Play
+                    </button>
+
+                    <button id="passBtn">
+                        Pass
+                    </button>
+
+                </div>
+
+                <div class="hand-row">
+
+                    <div id="bottomPlayer" class="player-slot">
+
+                        <div id="hand"></div>
+
+                    </div>
+
+                    <button id="sortBtn" class="sort-btn">
+                        Sort Hand
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="effects-layer"></div>
+
+</div>
+
+<script type="module" src="./js/app.js"></script>
+
+</body>
+</html>

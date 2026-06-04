@@ -1,0 +1,16 @@
+module.exports = {
+    createRoom: require("./createRoom"),
+    joinRoom: require("./joinRoom"),
+    leaveRoom: require("./removePlayer"),
+    disconnectPlayer: require("./disconnectPlayer"),
+    reconnectPlayer: require("./reconnectPlayer"),
+    playCards: require("./playCards"),
+    passTurn: require("./passTurn"),
+    startGame: require("./startGame"),
+    startMatch: require("./startMatch"),
+    handleWin: require("./handleWin"),
+    resetRound: require("./resetRound"),
+    pauseGame: require("./pauseGame"),
+    updateSettings: require("./updateSettings"),
+    kickPlayer: require("./kickPlayer"),
+};

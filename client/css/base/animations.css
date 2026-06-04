@@ -1,0 +1,67 @@
+@keyframes pulse {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes blink {
+
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes dangerBlink {
+
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.45;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes floatingScore {
+
+    0% {
+        opacity: 0;
+
+        transform:
+            translate(-50%, 20px)
+            scale(0.8);
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+
+        transform:
+            translate(-50%, -60px)
+            scale(1.2);
+    }
+}

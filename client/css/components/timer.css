@@ -1,0 +1,68 @@
+.turn-timer {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+
+    z-index: 10;
+
+    width: 24px;
+    height: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #ff4d4d;
+
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.turn-timer.low {
+    animation: pulse 0.6s infinite;
+}
+
+.prep-timer-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.prep-timer-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    
+    background: conic-gradient(
+        #38bdf8 var(--prep-progress),
+        rgba(255, 255, 255, 0.1) var(--prep-progress)
+    );
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.5), 0 0 15px rgba(56, 189, 248, 0.5);
+    
+    position: relative;
+    z-index: 1;
+}
+
+.prep-timer-circle::after {
+    content: '';
+    position: absolute;
+    inset: 5px;
+    background: #1e293b;
+    border-radius: 50%;
+    z-index: -1;
+}
+
